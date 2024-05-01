@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			perspective: 1000px;
+			background: black;
+		}
+		.main{
+			height: 100vh;
+			position: relative;
+			transform-style: preserve-3d;
+			/* transform: rotateX(40deg); */
+			perspective: 500px;
+		}
+		.main>div{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			border-radius: 50%;
+			border: 1px solid skyblue;
+		}
+		.sun{
+			width: 100px;
+			height: 100px;
+			background: greenyellow;
+			box-shadow: 0 0 10px 2px yellow;
+            transform-style: preserve-3d;
+			transform: rotateX(90deg);
+		}
+		.mercury{
+			width: 200px;
+			height: 200px;
+			animation: planetpath 17s infinite linear;
+		}
+		.mercury div{
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background: rebeccapurple;
+			position: absolute;
+			top: 0;
+			left: 35px;
+			transform-style: preserve-3d;
+			/* transform: rotateX(126deg); */
+
+		}
+		.venus{
+			width: 300px;
+			height: 300px;
+			animation: planetpath 16s infinite linear;
+		}
+		.venus div{
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background: green;
+			position: absolute;
+			top: 0;
+			left: 206px;
+		}
+		.earth{
+			width: 500px;
+			height: 500px;
+			animation: planetpath 15s infinite linear;
+		}
+		.earth>div{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background: skyblue;
+			position: absolute;
+			top: 100px;
+			left: -6px;
+		}
+		.moon{
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			animation: planetpath 4s infinite linear;
+		}
+		.moon>div{
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background: white;
+
+		}
+		.mars{
+			width: 700px;
+			height: 700px;
+			animation: planetpath 14s infinite linear;
+		}
+		.mars div{
+			width: 35px;
+			height: 35px;
+			border-radius: 50%;
+			background: red;
+			position: absolute;
+			top: 37px;
+			left: 157px;
+		}
+		.jupiter{
+			width: 900px;
+			height: 900px;
+			animation: planetpath 12s infinite linear;
+		}
+		.jupiter div{
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			background: greenyellow;
+			position: absolute;
+			top: 0;
+			left: 221px;
+		}
+		.saturn{
+			width: 1100px;
+			height: 1100px;
+			animation: planetpath 10s infinite linear;
+		}
+		.saturn div{
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			background: lightgreen;
+			position: absolute;
+			top: -31px;
+			left: 470px;
+		}
+		@keyframes planetpath{
+			100%{
+				transform:translate(-50%,-50%) rotate(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="sun"></div>
+		<div class="mercury">
+			<div></div>
+		</div>
+		<div class="venus">
+			<div></div>
+		</div>
+		<div class="earth">
+			<div>
+				<div class="moon">
+					<div></div>
+				</div>
+			</div>
+
+		</div>
+		<div class="mars">
+			<div></div>
+		</div>
+		<div class="jupiter">
+			<div></div>
+		</div>
+		<div class="saturn">
+			<div></div>
+		</div>
+	<!-- <div class="mercury">
+		<div></div>
+	</div> -->
+</div>
+</body>
+</html>
